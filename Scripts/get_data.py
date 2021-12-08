@@ -112,7 +112,7 @@ def convert_data_phenotips_raw(file, hpo_cols=True):
     return df_phenotips
 
 df_ankrd = convert_data_phenotips_raw("phenotips-export_2021-11-16.json")
-label_list = pd.read_excel("ANKRD11_individualsHPO-forLex.xlsx")
+label_list = pd.read_excel("ANKRD11_individualsHPO.xlsx")
 df_ankrd = df_ankrd.merge(label_list.loc[:, ['P-number', 'Variant type']], right_on='P-number', left_on='report_id')
 df_ankrd.loc[:, "HP:0004322":].to_csv("hpo_cols_with_labels.csv", index=False)
 
