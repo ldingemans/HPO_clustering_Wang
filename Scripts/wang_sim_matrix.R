@@ -26,7 +26,7 @@ customWang <- function(x,y){
   return(z)
 }
 
-df = read.csv("\\\\umcfs020\\ANTRGdata$\\Genetica Projecten\\Facial Recognition\\Studenten en Onderzoekers\\Lex\\Projecten\\ANKRD11_Elke\\Data\\hpo_cols_with_labels.csv",  header = TRUE)
+df = read.csv("hpo_cols_with_labels.csv",  header = TRUE)
 
 df_external_id <- df$Variant.type
 df_pnumber <- df$P.number
